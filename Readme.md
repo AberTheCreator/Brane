@@ -300,11 +300,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 **Contact**
 
-**Developer**: Your Name  
-**Email**: your.email@example.com  
-**GitHub**: [@yourusername](https://github.com/yourusername)  
-**LinkedIn**: [Your Profile](https://linkedin.com/in/yourprofile)
-
+**Developer**: Aber
+**Email**: PaulAber68@gmail.com  
 ---
 
 ## 🔗 **Links**
@@ -316,4 +313,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ and Redis for the Redis Hackathon 2024**
+**Built with ❤️ and Redis for the Redis Hackathon 2025**

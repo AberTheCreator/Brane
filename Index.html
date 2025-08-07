@@ -138,6 +138,41 @@
             cursor: pointer;
         }
 
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 20px;
+            right: 20px;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .mobile-nav.active {
+            display: flex;
+        }
+
+        .mobile-nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav a:hover {
+            color: white;
+        }
+
         /* Hero Section */
         .hero {
             padding: 120px 20px 80px;
@@ -168,6 +203,12 @@
             display: flex;
             gap: 16px;
             margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons .btn {
+            flex: 1;
+            min-width: 180px;
         }
 
         .stats {
@@ -226,9 +267,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            animation: float 6s ease-in-out infinite;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 24px;
         }
 
         .floating-icon:hover {
@@ -236,12 +277,40 @@
             box-shadow: 0 20px 40px rgba(139, 92, 246, 0.4);
         }
 
-        .floating-icon:nth-child(1) { top: 8%; right: 12%; }
-        .floating-icon:nth-child(2) { top: 16%; left: 8%; animation-delay: 2s; }
-        .floating-icon:nth-child(3) { left: 12%; bottom: 24%; }
-        .floating-icon:nth-child(4) { bottom: 8%; right: 16%; animation-delay: 4s; }
-        .floating-icon:nth-child(5) { top: 32%; right: 4%; }
-        .floating-icon:nth-child(6) { bottom: 16%; left: 4%; animation-delay: 2s; }
+        .floating-icon:nth-child(2) { top: 20%; left: 50%; transform: translateX(-50%); }
+        .floating-icon:nth-child(3) { top: 35%; right: 25%; }
+        .floating-icon:nth-child(4) { bottom: 35%; right: 25%; }
+        .floating-icon:nth-child(5) { bottom: 20%; left: 50%; transform: translateX(-50%); }
+        .floating-icon:nth-child(6) { bottom: 35%; left: 25%; }
+        .floating-icon:nth-child(7) { top: 35%; left: 25%; }
+
+        .digital-brain {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, #8B5CF6, #3B82F6, #06B6D4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 64px;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+            animation: brain-digital-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes brain-digital-pulse {
+            0%, 100% { 
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+            }
+            50% { 
+                transform: translate(-50%, -50%) scale(1.05);
+                box-shadow: 0 0 60px rgba(139, 92, 246, 0.8);
+            }
+        }
 
         /* Features Section */
         .features {
@@ -501,6 +570,7 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
                 text-align: center;
+                padding: 100px 20px 60px;
             }
 
             .hero-content h1 {
@@ -516,6 +586,39 @@
                 height: 300px;
             }
 
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: none;
+                text-align: center;
+                padding: 16px 24px;
+                font-size: 16px;
+            }
+
+            .digital-brain {
+                width: 120px;
+                height: 120px;
+                font-size: 48px;
+            }
+
+            .floating-icon {
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+            }
+
+            .floating-icon:nth-child(2) { top: 15%; left: 50%; transform: translateX(-50%); }
+            .floating-icon:nth-child(3) { top: 30%; right: 20%; }
+            .floating-icon:nth-child(4) { bottom: 30%; right: 20%; }
+            .floating-icon:nth-child(5) { bottom: 15%; left: 50%; transform: translateX(-50%); }
+            .floating-icon:nth-child(6) { bottom: 30%; left: 20%; }
+            .floating-icon:nth-child(7) { top: 30%; left: 20%; }
+
             .features-grid {
                 grid-template-columns: 1fr;
             }
@@ -527,6 +630,34 @@
             .footer-bottom {
                 flex-direction: column;
                 gap: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons .btn {
+                padding: 14px 20px;
+                font-size: 15px;
+            }
+
+            .brain-container {
+                width: 250px;
+                height: 250px;
+            }
+
+            .digital-brain {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+
+            .floating-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
             }
         }
     </style>
@@ -547,7 +678,15 @@
                 <a href="#signin" class="btn btn-secondary">Sign In</a>
                 <a href="#getstarted" class="btn btn-primary">Get Started</a>
             </div>
-            <button class="mobile-menu">☰</button>
+            <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+            <div id="mobileNav" class="mobile-nav">
+                <a href="#product">Product</a>
+                <a href="#solutions">Solutions</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#docs">Docs</a>
+                <a href="#signin">Sign In</a>
+                <a href="#getstarted">Get Started</a>
+            </div>
         </div>
     </nav>
 
@@ -560,7 +699,7 @@
                 <span class="gradient-text">Intelligence</span>
             </h1>
             <p>Redefine analytics with causal insights, multimodal data, and autonomous intelligence.</p>
-
+            
             <div class="cta-buttons">
                 <a href="#try" class="btn btn-primary">Try Brane Free</a>
                 <button class="btn btn-secondary" onclick="openModal()">
@@ -585,63 +724,7 @@
         </div>
 
         <div class="brain-container">
-            <svg class="brain-svg" viewBox="0 0 200 200">
-                <defs>
-                    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.8" />
-                        <stop offset="50%" stop-color="#3B82F6" stop-opacity="0.9" />
-                        <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.8" />
-                    </linearGradient>
-                    <filter id="glow">
-                        <feGaussianBlur stdDeviation="3" result="coloredBlur" />
-                        <feMerge>
-                            <feMergeNode in="coloredBlur" />
-                            <feMergeNode in="SourceGraphic" />
-                        </feMerge>
-                    </filter>
-                </defs>
-
-                <path d="M100 20 C130 20 150 40 160 60 C170 80 165 100 150 120 C140 140 120 150 100 160 C80 150 60 140 50 120 C35 100 40 80 50 60 C60 40 70 20 100 20 Z"
-                      fill="url(#brainGradient)" filter="url(#glow)" />
-
-                <g stroke="url(#brainGradient)" stroke-width="2" fill="none" opacity="0.6">
-                    <path d="M60 80 Q100 60 140 80">
-                        <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="4s" repeatCount="indefinite" />
-                    </path>
-                    <path d="M70 100 Q100 90 130 100">
-                        <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="4s" begin="1s" repeatCount="indefinite" />
-                    </path>
-                    <path d="M80 120 Q100 110 120 120">
-                        <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="4s" begin="2s" repeatCount="indefinite" />
-                    </path>
-                </g>
-
-                <circle cx="80" cy="70" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="100" cy="75" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.3s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="120" cy="70" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.6s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="85" cy="95" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.9s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="105" cy="100" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.2s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="115" cy="95" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.5s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="90" cy="120" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1.8s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="110" cy="125" r="3" fill="#8B5CF6">
-                    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="2.1s" repeatCount="indefinite" />
-                </circle>
-            </svg>
-
+            <div class="digital-brain">🧠</div>
             <div class="floating-icon">📊</div>
             <div class="floating-icon">📈</div>
             <div class="floating-icon">▶️</div>
@@ -807,6 +890,30 @@
             });
         }
 
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            
+            mobileNav.classList.toggle('active');
+            
+            // Change hamburger icon to X when open
+            if (mobileNav.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '✕';
+            } else {
+                mobileMenuBtn.innerHTML = '☰';
+            }
+        }
+
+        // Close mobile menu when clicking a link
+        function closeMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            
+            mobileNav.classList.remove('active');
+            mobileMenuBtn.innerHTML = '☰';
+        }
+
         // Modal Functions
         function openModal() {
             document.getElementById('demoModal').classList.add('active');
@@ -818,14 +925,14 @@
 
         function submitDemo(event) {
             event.preventDefault();
-
+            
             // Get form data
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData.entries());
-
+            
             // Show success message
             alert('Demo request submitted! We\'ll be in touch soon to schedule your personalized demonstration.');
-
+            
             // Reset form and close modal
             event.target.reset();
             closeModal();
@@ -841,6 +948,14 @@
         // Initialize particles when page loads
         window.addEventListener('load', function() {
             createParticles();
+        });
+
+        // Add click handlers to mobile nav links
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavLinks = document.querySelectorAll('#mobileNav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
         });
 
         // Smooth scrolling for navigation links
@@ -862,7 +977,7 @@
                 this.style.transform = 'scale(1.1)';
                 this.style.boxShadow = '0 20px 40px rgba(139, 92, 246, 0.4)';
             });
-
+            
             icon.addEventListener('mouseleave', function() {
                 this.style.transform = 'scale(1)';
                 this.style.boxShadow = 'none';
@@ -895,4 +1010,4 @@
         });
     </script>
 </body>
-  </html>
+    </html>

@@ -1,6 +1,6 @@
 # 🧠 Brane AI: The AI Brain for Next-Gen Data Intelligence
 
-**Redis AI Challenge 2024 Submission**
+**Redis AI Challenge 2025 Submission**
 
 > **Redefine analytics with causal insights, multimodal data, and autonomous intelligence.**
 
@@ -38,9 +38,10 @@ python run_backend.py
 
 ## 📋 **Table of Contents**
 
-- [Features](#features)
-- [Redis Multi-Model Architecture](#redis-multi-model-architecture)
-- [Installation](#installation)
+- [Features](## ✨ **Features**)
+- [Redis Multi-Model Architecture](## 🏗️ **Redis Multi-Model Architecture**
+)
+- [Installation](## 🛠️ **Installation**)
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
 - [Technical Implementation](#technical-implementation)

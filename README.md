@@ -21,7 +21,7 @@ This project showcases Redis as a **complete data infrastructure** powering:
 
 ```bash
 # Quick Start
-git clone https://github.com/yourusername/brane-ai
+git clone https://github.com/aberthecreator/brane-ai
 cd brane-ai
 pip install -r requirements.txt
 python run_backend.py
@@ -42,10 +42,10 @@ python run_backend.py
 - [Redis Multi-Model Architecture](#-redis-multi-model-architecture)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [API Documentation](#api-documentation)
-- [Technical Implementation](#technical-implementation)
-- [Performance](#performance)
-- [Contributing](#contributing)
+- [API Documentation](#-api-documentation)
+- [Technical Implementation](#-technical-implementation)
+- [Performance](#-performance)
+- [Contributing](#-contributing)
 
 ## ✨ **Features**
 

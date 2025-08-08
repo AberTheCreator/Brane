@@ -38,10 +38,10 @@ python run_backend.py
 
 ## 📋 **Table of Contents**
 
-- [Features](#✨features)
-- [Redis Multi-Model Architecture]
-- [Installation](##**Installation**)
-- [Usage](#usage)
+- [Features](#-features)
+- [Redis Multi-Model Architecture](#-redis-multi-model-architecture)
+- [Installation](#-installation)
+- [Usage](#-usage)
 - [API Documentation](#api-documentation)
 - [Technical Implementation](#technical-implementation)
 - [Performance](#performance)

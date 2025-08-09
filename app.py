@@ -18,7 +18,7 @@ class RedisConfig:
     def __init__(self):
         self.host = os.getenv("REDIS_HOST", "redis-19369.c275.us-east-1-4.ec2.redns.redis-cloud.com")
         self.port = int(os.getenv("REDIS_PORT", "19369"))
-        self.password = os.getenv("REDIS_PASSWORD", "M2qfJIPr9nSKDKjV8kXv263Is45idDc3")
+        self.password = os.getenv("REDIS_PASSWORD", "*******")
         
     def get_sync_client(self) -> redis.Redis:
         """Get synchronous Redis client"""

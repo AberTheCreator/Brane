@@ -155,8 +155,8 @@ data_points = redis_client.execute_command(
 ### **Backend Setup**
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/brane-ai
-cd brane-ai
+git clone https://github.com/yourusername/brane
+cd brane
 
 # Install Python dependencies
 pip install -r requirements.txt
@@ -164,7 +164,7 @@ pip install -r requirements.txt
 # Set Redis credentials (or use .env file)
 export REDIS_HOST="your-redis-host.redns.redis-cloud.com"
 export REDIS_PORT="19369" 
-export REDIS_PASSWORD="your-redis-password"
+export REDIS_PASSWORD="********"
 
 # Start backend server
 python run_backend.py
@@ -215,7 +215,7 @@ Navigate to `http://localhost:8000` to access the full-featured demo:
 import requests
 
 # Store complex data structure
-response = requests.post('http://localhost:5000/api/data', json={
+response = requests.post('http://localhost:8000/api/data', json={
     "user_id": "data_scientist_001",
     "data_type": "multimodal",
     "content": {
@@ -248,7 +248,7 @@ print(f"Found {results['total']} relevant insights")
 #### **Real-time Analytics**
 ```python
 # Get time-series analytics
-response = requests.get('http://localhost:5000/api/analytics', params={
+response = requests.get('http://localhost:8000/api/analytics', params={
     "user_id": "data_scientist_001",
     "hours": 24
 })
@@ -262,7 +262,7 @@ for metric, data in analytics['analytics'].items():
 
 ```javascript
 // Connect to real-time insights stream
-const ws = new WebSocket('ws://localhost:5000/ws/your_user_id');
+const ws = new WebSocket('ws://localhost:8000/ws/your_user_id');
 
 ws.onmessage = function(event) {
     const data = JSON.parse(event.data);
@@ -434,7 +434,7 @@ We welcome contributions to extend Brane's Redis capabilities!
 ### **Development Setup**
 ```bash
 git clone https://github.com/aberthecreator/brane
-cd brane-ai
+cd brane
 
 # Install development dependencies
 pip install -r requirements-dev.txt

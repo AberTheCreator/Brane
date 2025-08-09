@@ -12,7 +12,7 @@ import uvicorn
 # Set Redis environment variables
 os.environ["REDIS_HOST"] = "redis-19369.c275.us-east-1-4.ec2.redns.redis-cloud.com"
 os.environ["REDIS_PORT"] = "19369"
-os.environ["REDIS_PASSWORD"] = "M2qfJIPr9nSKDKjV8kXv263Is45idDc3"
+os.environ["REDIS_PASSWORD"] = "********"
 
 if __name__ == "__main__":
     print("🧠 Starting Brane AI Redis Backend...")

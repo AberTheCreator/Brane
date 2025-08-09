@@ -4,9 +4,8 @@
 
 > **Redefine analytics with causal insights, multimodal data, and autonomous intelligence.**
 
-Brane AI transforms Redis from a simple cache into a complete AI-powered data intelligence platform, demonstrating the full potential of Redis as a multi-model database for modern applications.
+Brane transforms Redis from a simple cache into a complete AI-powered data intelligence platform, demonstrating the full potential of Redis as a multi-model database for modern applications.
 
-![Brane AI Dashboard](https://via.placeholder.com/800x400/1e293b/ffffff?text=Brane+AI+Dashboard)
 
 ## 🏆 **Challenge Theme: Redis is More Than Just a Cache**
 
@@ -21,8 +20,8 @@ This project showcases Redis as a **complete data infrastructure** powering:
 
 ```bash
 # Quick Start
-git clone https://github.com/aberthecreator/brane-ai
-cd brane-ai
+git clone https://github.com/aberthecreator/brane
+cd brane
 pip install -r requirements.txt
 python run_backend.py
 # Open http://localhost:8000 in your browser
@@ -181,16 +180,6 @@ npx serve .
 
 # Access application
 open http://localhost:8000
-```
-
-### **Docker Deployment** (Optional)
-```bash
-# Build and run with Docker
-docker build -t brane-ai .
-docker run -p 8000:8000 -p 5000:5000 \
-  -e REDIS_HOST=your-host \
-  -e REDIS_PASSWORD=your-password \
-  brane-ai
 ```
 
 ## 📖 **Usage**
@@ -440,11 +429,11 @@ redis-server --loadmodule redisearch.so
 
 ## 🤝 **Contributing**
 
-We welcome contributions to extend Brane AI's Redis capabilities!
+We welcome contributions to extend Brane's Redis capabilities!
 
 ### **Development Setup**
 ```bash
-git clone https://github.com/yourusername/brane-ai
+git clone https://github.com/aberthecreator/brane
 cd brane-ai
 
 # Install development dependencies
@@ -464,16 +453,13 @@ python run_backend.py --reload
 - **Performance**: Query optimization and caching strategies
 - **Documentation**: API examples and tutorials
 
-## 📝 **License**
-
-MIT License - See [LICENSE](LICENSE) file for details.
 
 ## 🏆 **Redis AI Challenge 2025**
 
 **Submission Category**: Redis Beyond Cache  
-**Team**: [Your Name/Team]  
-**Demo**: [Live Demo URL]  
-**Source**: [GitHub Repository]
+**Team**: ABER 
+**Demo**: [Live Demo URL](https://brane-kohl.vercel.app/)
+**Source**:[GitHub Repository](https://github.com/AberTheCreator/Brane.git)
 
 ### **Key Innovation Points**
 1. **Multi-Model Database**: Redis as complete data infrastructure
